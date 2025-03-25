@@ -10,6 +10,10 @@ This template should help get you started developing with Vue 3 in Vite.
 
 See [Vite Configuration Reference](https://vite.dev/config/).
 
+# Advantage of Vue.js
+
+- Single Page Application (SPA): Only a single HTML page sent (initially) to the browser
+
 ## Project Setup
 
 ```sh
