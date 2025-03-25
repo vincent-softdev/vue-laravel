@@ -1,4 +1,9 @@
-import DefaultLayout from './components/DefaultLayout.vue'
+import DefaultLayout from '@/components/DefaultLayout.vue'
+import Home from '@/pages/Home.vue'
+import MyImages from '@/pages/MyImages.vue'
+import Login from '@/pages/Login.vue'
+import Signup from '@/pages/Signup.vue'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
