@@ -3,6 +3,7 @@ import Home from '@/pages/Home.vue'
 import MyImages from '@/pages/MyImages.vue'
 import Login from '@/pages/Login.vue'
 import Signup from '@/pages/Signup.vue'
+import NotFound from '@/pages/NotFound.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
@@ -42,6 +43,14 @@ const routes = [
     component: Signup,
     meta: {
       title: 'Vincent Shop: Signup'
+    }
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFound,
+    meta: {
+      title: 'Not Found'
     }
   }
 ]
