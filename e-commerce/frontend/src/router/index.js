@@ -13,24 +13,36 @@ const routes = [
       {
         path: '/',
         name: 'Home',
-        component: Home
+        component: Home,
+        meta: {
+          title: 'Vincent Shop: Home'
+        }
       },
       {
         path: '/my-images',
         name: 'MyImages',
-        component: MyImages
+        component: MyImages,
+        meta: {
+          title: 'Vincent Shop: My Images'
+        }
       }
     ]
   },
   {
     path: '/login',
     name: 'Login',
-    component: Login
+    component: Login,
+    meta: {
+      title: 'Vincent Shop: Login'
+    }
   },
   {
     path: '/signup',
     name: 'Signup',
-    component: Signup
+    component: Signup,
+    meta: {
+      title: 'Vincent Shop: Signup'
+    }
   }
 ]
 
