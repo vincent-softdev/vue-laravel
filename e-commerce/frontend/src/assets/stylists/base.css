@@ -1,0 +1,16 @@
+:root{
+  --powder-blue-color: #A7BED3;
+  --light-blue-color: #C6E2E9;
+  --cream-color: #F1FFC4;
+  --apricot-color: #FFCAAF;
+  --tan-color: #DAB894;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
