@@ -1,9 +1,19 @@
 :root{
+  /* Nav bar ,headers, links */
   --powder-blue-color: #A7BED3;
+  /* Backgrounds, cards, sections */
   --light-blue-color: #C6E2E9;
+  /* CTA buttons, labels, hover states */
   --cream-color: #F1FFC4;
+  /* Sale tags, special banners, footer */
   --apricot-color: #FFCAAF;
+  /* Text or secondary sections */
   --tan-color: #DAB894;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
