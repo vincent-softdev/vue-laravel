@@ -11,69 +11,39 @@
 </head>
 <body class="h-full grid place-items-center">
   <div id="app">
-    <section v-show="isAnyAssignmentNotDone">
-      <h2 class="font-bold mb-2">In-progress</h2>
-
-      <ul>
-        <li 
-          v-for="assignment in inProgressAssignments" 
-          :key="assignment.id">{{ assignment.name }} 
-          <label > {{assignment.assignment}} <input type="checkbox" v-model="assignment.done"></label>
-        </li>
-      </ul>
-    </section>
-
-    <section class="mt-8" v-if="isAnyAssignmentDone">
-      <h2 class="font-bold mb-2">Completed</h2>
-
-      <ul>
-        <li v-for="assignment in completedAssignments" :key="assignment.id">{{ assignment.name }}
-          <label > {{assignment.assignment}} <input type="checkbox" v-model="assignment.done"></label>
-        </li>
-      </ul>
-    </section>
+    <app-button>
+      Submit
+    </app-button>
   </div>
 
   <script>
-    
     let app = {
-      data() {
-        return {
-          assignments : [
-            {
-              id: 1,
-              name: 'Finish project',
-              done: false
-            },
-            {
-              id: 2,
-              name: 'Read chapter 4',
-              done: false
-            },
-            {
-              id: 3,
-              name: 'Turn in homework',
-              done: false
-            }
-          ]
-        }
-      },
-
-      computed: {
-        inProgressAssignments() {
-          return this.assignments.filter(a => ! a.done);
+      components : {
+        'app-button': {
+          template: `
+            <button class="bg-gray-200 px-4 py-2 hover:bg-gray-300 hover:text-white">
+              <slot />  
+            </button>
+          `,
+          /**
+           * Called when the component is mounted, which is when the component is part of the document.
+           * It is called after the component is inserted into the document, and after all of the
+           * component's static sub-trees have been rendered.
+           *
+           * This lifecycle hook is useful if you want to perform some kind of initialization that
+           * requires the component to be part of the document.
+           *
+           * @see https://vuejs.org/api/options-lifecycle.html#mounted
+           */
+          mounted() {
+          }
         },
-        completedAssignments() {
-          return this.assignments.filter(a => a.done);
-        },
-        isAnyAssignmentDone() {
-          return this.assignments.some(a => a.done);
-        },
-        isAnyAssignmentNotDone() {
-          return this.assignments.some(a => ! a.done);
-        }
+        'assignment-list': {},
+        'assignment-list-item': {},
+        'accordion': {}
       }
     }
+    
 
     Vue.createApp(app).mount('#app');
   </script>
